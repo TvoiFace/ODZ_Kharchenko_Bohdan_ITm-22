@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/hotelItemImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#757575"
+        android:scaleType="centerCrop"
+        android:scrollbarTrackHorizontal="@drawable/example_hotel"
+        android:scrollbarTrackVertical="@drawable/example_hotel"
+        android:src="@drawable/food_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/example_hotel" />
+
+    <TextView
+        android:id="@+id/hotelItemName"
+        style="@style/AppTheme.Subheader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintStart_toEndOf="@+id/hotelItemImage"
+        app:layout_constraintTop_toTopOf="@+id/hotelItemImage"
+        tools:text="Hotel name" />
+
+    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+        android:id="@+id/hotelItemRating"
+        style="@style/Widget.MaterialRatingBar.RatingBar.Indicator.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/hotelItemName"
+        app:layout_constraintTop_toBottomOf="@+id/hotelItemName" />
+
+    <TextView
+        android:id="@+id/hotelItemNumRatings"
+        style="@style/AppTheme.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:textColor="@color/greyDisabled"
+        app:layout_constraintBottom_toBottomOf="@+id/hotelItemRating"
+        app:layout_constraintStart_toEndOf="@+id/hotelItemRating"
+        app:layout_constraintTop_toTopOf="@+id/hotelItemRating"
+        tools:text="(10)" />
+
+    <TextView
+        android:id="@+id/hotelItemCategory"
+        style="@style/AppTheme.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/greySecondary"
+        app:layout_constraintStart_toStartOf="@+id/hotelItemRating"
+        app:layout_constraintTop_toBottomOf="@+id/hotelItemRating"
+        tools:text="Casino" />
+
+    <TextView
+        android:id="@+id/hotelItemCityDivider"
+        style="@style/AppTheme.TextDivider"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:text="@string/divider_bullet"
+        app:layout_constraintStart_toEndOf="@+id/hotelItemCategory"
+        app:layout_constraintTop_toTopOf="@+id/hotelItemCategory" />
+
+    <TextView
+        android:id="@+id/hotelItemCity"
+        style="@style/AppTheme.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:textColor="@color/greySecondary"
+        app:layout_constraintStart_toEndOf="@+id/hotelItemCityDivider"
+        app:layout_constraintTop_toTopOf="@+id/hotelItemCategory"
+        tools:text="Sumy" />
+
+    <TextView
+        android:id="@+id/hotelItemPrice"
+        style="@style/AppTheme.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/greySecondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/hotelItemName"
+        tools:text="$$$" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
